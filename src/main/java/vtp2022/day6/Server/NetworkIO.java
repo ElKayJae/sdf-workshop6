@@ -13,6 +13,7 @@ public class NetworkIO {
     private OutputStream os;
     private DataOutputStream dos;
 
+    //class to instantiate the datastreams and to define where to write to
     public NetworkIO(Socket sock) throws IOException {
         is = sock.getInputStream();
         dis = new DataInputStream(is);
@@ -21,12 +22,12 @@ public class NetworkIO {
     }
 
     public String read() throws IOException {
-        //dos.writeUTF()
+        //read from client
         return dis.readUTF();
     }
 
     public void write(String msg) throws IOException {
-        //dos.writeUTF()
+        //write to client
         dos.writeUTF(msg);
         dos.flush();
     }
