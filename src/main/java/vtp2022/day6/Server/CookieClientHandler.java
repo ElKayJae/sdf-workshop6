@@ -9,6 +9,7 @@ public class CookieClientHandler implements Runnable{
 
     public CookieClientHandler(Socket s, String cookieFile){
         this.sock = s;
+        this.cookieFile = cookieFile;
     }
     
     @Override
@@ -19,7 +20,7 @@ public class CookieClientHandler implements Runnable{
             String req = "";
             while (!req.equals("exit")) {
                 req=netIO.read();
-                System.out.println("[client} " +req);
+                System.out.println("[client] " +req);
                 if (req.trim().equals("exit")) {
                     break;
                     //TODO implement the random cookie and return the string to client

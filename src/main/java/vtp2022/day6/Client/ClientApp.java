@@ -10,7 +10,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
-// run mvn compile exec:java -Dexec.mainClass="vtp2022.day4.Client.ClientApp" -Dexec.args="0.0.0.0:3000"
+// run mvn compile exec:java -Dexec.mainClass="vtp2022.day6.Client.ClientApp" -Dexec.args="0.0.0.0:3000"
 public class ClientApp {
   public static void main(String[] args) {
   String arg = args[0];
